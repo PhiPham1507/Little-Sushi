@@ -1,3 +1,4 @@
+#Have a .jpg file named "image" or edit line 8 for the appropriate file, in the same directory as this file. 
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -49,4 +50,5 @@ plt.show()
 #Save the image to disk to compare it with different values of pca_components
 image_reconstructed_uint8 = (image_reconstructed * 255).astype(np.uint8)
 image_reconstructed_bgr = cv2.cvtColor(image_reconstructed_uint8, cv2.COLOR_RGB2BGR)
+
 cv2.imwrite("imaged_reconstructed.jpg", image_reconstructed_bgr)
